@@ -18,7 +18,6 @@ It integrates with a hypervisor (e.g. VirtualBox) and can bootstrap a new develo
 by running a single command.
 
 Part 1:
-*******
 
 You have complete freedom in the tools you want to use to accomplish this task, that includes
 working with a server OS of your choice. Start by building an application that will display
@@ -30,8 +29,8 @@ can be accessed by an external browser. It should display the following (not lim
  - Disk Usage
  - OS Version
 
+
 Part 2:
-*******
 
 Create a Vagrant file that will “spin” up a server and install your web application. You can use any
 bootstrapping method that you want (Chef, Puppet, Shell Scripts, etc.) but you should only need
@@ -40,7 +39,6 @@ on your local machine, it should be pointing to the port this web app is listeni
 machine.
 
 Part 3:
-*******
 
 Assume that this is just the beginning. We would like to build up this tool to help with many tasks
 such as:
@@ -58,7 +56,6 @@ do they all fit together?
 admin interface that will let us to manage all of these agents?
 
 Deliverables:
-*************
 
  - A Git repo that contains the web application and vagrant resources required to spin up a
 virtual machine.
