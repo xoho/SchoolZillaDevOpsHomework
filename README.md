@@ -29,6 +29,8 @@ can be accessed by an external browser. It should display the following (not lim
  - Disk Usage
  - OS Version
 
+*Solution* - see [part1_2/README.md](part1_2/README.md)
+
 
 Part 2:
 
@@ -37,6 +39,9 @@ bootstrapping method that you want (Chef, Puppet, Shell Scripts, etc.) but you s
 to run one command (vagrant up) to get the server operational. When you navigate to localhost
 on your local machine, it should be pointing to the port this web app is listening to on the guest
 machine.
+
+*Solution* - see [part1_2/README.md](part1_2/README.md)
+
 
 Part 3:
 
