@@ -60,8 +60,10 @@ do they all fit together?
  - If there are ‘agents’ installed on all of our servers, how might we go about creating an
 admin interface that will let us to manage all of these agents?
 
+*Solution* - see [part3/README.md](part3/README.md)
+
 Deliverables:
 
- - A Git repo that contains the web application and vagrant resources required to spin up a
+ - A [Git repo](https://github.com/xoho/SchoolZillaDevOpsHomework) that contains the web application and vagrant resources required to spin up a
 virtual machine.
- - A document addressing future plans for Schoolzilla’s admin tool.
+ - A [document](part3/README.md) addressing future plans for Schoolzilla’s admin tool.
