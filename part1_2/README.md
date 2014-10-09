@@ -1,17 +1,24 @@
-Part 1 and 2 Solution
-=====================
+Solution for Part 1 and 2 
+=========================
 
-The OS chosen for this solution is Ubuntu 14.01. However, this solution was designed to work an nearly any operating system including Windows.
+Since the two parts of the homework are intertwined, the solution for both parts is expressed in this document.
 
-The vagrant provisining mechanism chosed for this solution is "shell" provisioning. While puppet or chef could have also been used, the "shell" provisioning is the most simple and straight forward and fits well with this solution.
+The OS chosen for this solution is Ubuntu 14.01. However, this solution was designed to work on nearly any operating system including Windows.
 
-The code which returns the pertenant server information is written in Python using the Bottle web micro web framework. Bottle was chosen for its extremly small size.
+The vagrant provisioning mechanism chosen for this solution is "shell" provisioning. While puppet or chef could have also been used, the "shell" provisioning is the most simple and straight forward and fits well with this solution.  Additionally, due to the simplicity of the solution, all provisioning details are included in the main Vagrant file using the variable assignment feature of vagrant shell provisioning.  The Vagrant file is located in the same folder as this file.
 
-The webserver runs on port 8000 in the vagrant vm and is exposed, per request to the host machine on port 80.
+The code which returns the pertinent server information is written in Python using the [Bottle](http://bottlepy.org/docs/dev/index.html) web micro web framework. Bottle was chosen for its extremely small size.
 
-An upstart script has been written which will automatically start the server on any powercycle of the vm.
+The web server runs on port 8000 in the vagrant vm and is exposed, per request to the host machine on port 80.
 
-The data returned by this application via a web call is in json format with the following structure (and example data):
+An upstart script has been written which will automatically start the server on any reload of the vm.
+
+There are two folders associated with this solution:
+
+ - [provision](provision) - contains all files necessary for provisioning
+ - [source](source) - contains all files necessary to run the application
+
+JSON is used as the return format so that it can be easily consumed by any other application.  The data returned by this application via a web call has the following structure (and example data):
 
     {
       "disk_usage": 3.1,
