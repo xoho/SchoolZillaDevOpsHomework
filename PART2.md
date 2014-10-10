@@ -15,7 +15,11 @@ Solution
 
 The OS chosen for this Vagrant instance is Ubuntu 14.01 LTS. 
 
-The vagrant provisioning mechanism chosen for this solution is "shell" provisioning. While puppet or chef could have also been used, the "shell" provisioning is the most simple and straight forward and fits well with this solution.  Additionally, due to the simplicity of the solution, all provisioning details are included in the main Vagrant file using the variable assignment feature of vagrant shell provisioning.  The Vagrant file is located in the same folder as this file.
+The vagrant provisioning mechanism chosen for this solution is "shell" provisioning. While puppet or chef could have also been used, the "shell" provisioning is the most simple and straight forward and fits well with this solution.  
+
+The [Vagrant](Vagrant) file is located in the same folder as this file.
+
+All provisioning takes place in the [provision.sh](provision/provision.sh) file. This file installs the necessary dependencies and libraries to run this solution.
 
 An [upstart script](provision/szmon.conf) (found in the [provision](provision) has been written which will automatically start the server on any reload of the vm (vagrant reload or vagrant halt/vagrant up).
 
