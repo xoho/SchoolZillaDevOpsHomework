@@ -27,7 +27,7 @@ When the url is called with no query string parameters ([http://localhost](http:
  
 
 Human readable format from [http://localhost](http://localhost):
-![Single Server Human Readable](docs/images/single-server.png)
+![Single Server Human Readable](docs/images/single-server.PNG)
 
 JSON output format from [http://localhost?format=json](http://localhost?format=json):
 
