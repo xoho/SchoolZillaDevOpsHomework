@@ -1,7 +1,7 @@
-SchoolZillaDevOpsHomework
-=========================
+SchoolZilla DevOps Homework
+===========================
 
-Prepared by Eric Hoxworth (eric.hoxworth@gmail.com)
+Prepared by [Eric Hoxworth](mailto:eric.hoxworth@gmail.com)
 
 
 Original Homework Assignment
@@ -17,7 +17,7 @@ process. Vagrant is a tool for automating the creation of virtual machines on yo
 It integrates with a hypervisor (e.g. VirtualBox) and can bootstrap a new development server just
 by running a single command.
 
-Part 1:
+**Part 1**
 
 You have complete freedom in the tools you want to use to accomplish this task, that includes
 working with a server OS of your choice. Start by building an application that will display
@@ -29,10 +29,10 @@ can be accessed by an external browser. It should display the following (not lim
  - Disk Usage
  - OS Version
 
-*Solution* - see [part1_2/README.md](part1_2/README.md)
+see [**Solution to Part 1**](PART1.md)
 
 
-Part 2:
+**Part 2**
 
 Create a Vagrant file that will “spin” up a server and install your web application. You can use any
 bootstrapping method that you want (Chef, Puppet, Shell Scripts, etc.) but you should only need
@@ -40,10 +40,10 @@ to run one command (vagrant up) to get the server operational. When you navigate
 on your local machine, it should be pointing to the port this web app is listening to on the guest
 machine.
 
-*Solution* - see [part1_2/README.md](part1_2/README.md)
+see [**Solution to Part 2**](PART2.md)
 
 
-Part 3:
+**Part 3**
 
 Assume that this is just the beginning. We would like to build up this tool to help with many tasks
 such as:
@@ -60,10 +60,11 @@ do they all fit together?
  - If there are ‘agents’ installed on all of our servers, how might we go about creating an
 admin interface that will let us to manage all of these agents?
 
-*Solution* - see [part3/README.md](part3/README.md)
+see [**Solution to Part 3**](PART3.md)
 
-Deliverables:
+Deliverables
+------------
 
  - A [Git repo](https://github.com/xoho/SchoolZillaDevOpsHomework) that contains the web application and vagrant resources required to spin up a
 virtual machine.
- - A [document](part3/README.md) addressing future plans for Schoolzilla’s admin tool.
+ - A [document](PART3.md) addressing future plans for Schoolzilla’s admin tool.
