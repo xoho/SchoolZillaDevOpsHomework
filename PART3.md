@@ -1,5 +1,5 @@
-Solution for Part 3 
-===================
+Homework Part 3
+===============
 
 In addition to the health status checking delivered in the solution for [part 1](PART1.md) and [part 2](PART2.md), the following features are desired functionality with the SchoolZilla "server management system":
 
@@ -29,7 +29,7 @@ A service orchestrator can run tasks on end point machines or can request or con
 
 There should be a central repository of deployment information, ideally stored in a source control system like [GitLab](https://about.gitlab.com/). Tasks and builds should either be checked in manually into the source control system or be automatically checked in through a continuous integration system like [Jenkins](http://jenkins-ci.org/).  The service orchestrator should pull builds and tasks from the source repo to push to endpoints so that changes can be tracked and rolled back to previous versions if necessary.
 
-The solution to [part 1](PART1.md) could be extended to allow receiving of control mechanisms which would command the system to pull from the source repo, execute code, and report back results.  
+The solution to [part 1](PART1.md) could be extended to allow receiving of control mechanisms which would command the system to pull from the source repo, execute code, and report back results using a logging server system like [LogStash](http://logstash.net/).  
 
 While a service orchestrator can be built from scratch, choosing a pre-built option like [Ansible](http://www.ansible.com/home), [Chef](https://www.getchef.com/chef/), [Puppet ](http://puppetlabs.com/) or [SaltStack](http://www.saltstack.com/community/) might provide more options and a corporate/community supported code base. 
 
