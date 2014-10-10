@@ -21,47 +21,61 @@ The [code](source/), which returns the required server information, is written i
 
 The code is configured to run the web server on port 8000.
 
-JSON is used as the return format so that it can be easily consumed by any other application.  The data returned by this application via a web call has the following structure (and example data):
+The data for the server is returned in both a "human readable" format  and a JSON format. JSON was used as the return format so that it can be easily consumed by any other application. 
 
-    {
-      "disk_usage": 3.1,
-      "cpu_usage": 0.7,
-      "memory_usage": 25.7,
-      "memory_details": {
-        "swap": {
-          "total": 0,
-          "percent": 0.0
-        },
-        "virtual": {
-          "total": 513818624,
-          "percent": 25.7
-        }
-      },
-      "os_version": "linux2",
-      "cpu_details": {
-        "count": 1,
-        "details": [
-          0.7
-        ]
-      },
-      "disk_details": {
-        "partition_count": 1,
-        "iostats": {
-          "write_bytes": 657858560,
-          "read_count": 7045,
-          "write_count": 1531,
-          "read_time": 4528,
-          "read_bytes": 198636544,
-          "write_time": 2180
-        },
-        "partitions": [
-          {
-            "device": "/dev/sda1",
-            "mountpoint": "/",
-            "total": 42241163264,
-            "percent": 3.1
-          }
-        ]
-      }
-    }
+When the url is called with no query string parameters ([http://localhost](http://localhost)), the human readable format is displayed.  When the webpage is called with the query string  format=json ([http://localhost?format=json](http://localhost?format=json)), the json data is displayed. 
  
+
+Human readable format from [http://localhost](http://localhost):
+![Single Server Human Readable](docs/images/single-server.png)
+
+JSON output format from [http://localhost?format=json](http://localhost?format=json):
+
+	{
+	  "disk_usage": 3.1,
+	  "cpu_usage": 1.5,
+	  "memory_usage": 29.4,
+	  "memory_details": {
+	    "swap": {
+	      "total": 0,
+	      "percent": 0.0
+	    },
+	    "virtual": {
+	      "total": 513818624,
+	      "percent": 29.4
+	    }
+	  },
+	  "hostname": "vagrant-ubuntu-trusty-64",
+	  "os_version": "Linux-3.13.0-36-generic-x86_64-with-Ubuntu-14.04-trusty",
+	  "boottime": "2014-10-10 10:46:09",
+	  "cpu_details": {
+	    "count": 1,
+	    "details": [
+	      {
+	        "cpu_usage": 1.1,
+	        "name": 0
+	      }
+	    ]
+	  },
+	  "disk_details": {
+	    "partition_count": 1,
+	    "iostats": {
+	      "write_bytes": 405655552,
+	      "read_count": 10891,
+	      "write_count": 6784,
+	      "read_time": 5256,
+	      "read_bytes": 271176704,
+	      "write_time": 18308
+	    },
+	    "partitions": [
+	      {
+	        "device": "/dev/sda1",
+	        "mountpoint": "/",
+	        "total": 42241163264,
+	        "percent": 3.1
+	      }
+	    ]
+	  }
+	}
+ 
+NOTE: Due to the simplicity of this code, no tests were written.  
