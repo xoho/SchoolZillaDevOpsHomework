@@ -29,9 +29,13 @@ A service orchestrator can run tasks on end point machines or can request or con
 
 There should be a central repository of deployment information, ideally stored in a source control system like [GitLab](https://about.gitlab.com/). Tasks and builds should either be checked in manually into the source control system or be automatically checked in through a continuous integration system like [Jenkins](http://jenkins-ci.org/).  The service orchestrator should pull builds and tasks from the source repo to push to endpoints so that changes can be tracked and rolled back to previous versions if necessary.
 
+The solution to [part 1](PART1.md) could be extended to allow receiving of builds via ssh or file uploads and could could then have control mechanisms built in to deploy content or execute code.
+
 While a service orchestrator can be built from scratch, choosing a pre-built option like [Ansible](http://www.ansible.com/home), [Chef](https://www.getchef.com/chef/), [Puppet ](http://puppetlabs.com/) or [SaltStack](http://www.saltstack.com/community/) will probably be a better choice. 
 
 For a great comparison of service orchestrators [see this article](http://www.infoworld.com/article/2609482/data-center/review--puppet-vs--chef-vs--ansible-vs--salt.html).
+
+Without knowing all the requirements for a service orchestration system, I would hesitate to recommend a specific one.  I have a personal preference to [SaltStack](http://www.saltstack.com/community/) based on it's robust architecture, small client and server-push control paradigm.
 
 
 Locally installed agents
