@@ -21,6 +21,8 @@ An [upstart script](provision/szmon.conf) (found in the [provision](provision) h
 
 The Vagrant VM is configured to map port 8000 on the guest VM to the host machine on port 80 so that navigating to [http://localhost](http://localhost) on the host machine yields the contents of the page.
 
+The Vagrant VM will boot and host the application found in the [source](source) folder (see [part 1 solution](PART1.md)).
+
 This solution consists of two key parts
  
  - The [Vagrant](VagrantFile) file containing the definition and provisioning script
